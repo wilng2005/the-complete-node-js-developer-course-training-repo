@@ -3,11 +3,7 @@ console.log('Starting notes.js');
 
 module.exports.age= 25;
 
-module.exports.add= (x, y)=>{
-	return x+y;
+module.exports.addNote = ()=>{
+	console.log("addNote");
+	return "New Note";
 };
-
-// module.exports.addNote = ()=>{
-// 	console.log("addNote");
-// 	return "New Note";
-// };
