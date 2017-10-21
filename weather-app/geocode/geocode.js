@@ -1,6 +1,6 @@
 const request = require('request');
 
-var geocode=(address)=>{
+var geocodeAddress=(address)=>{
 	var encodedAddress = encodeURIComponent(address);
 
 	request({
@@ -23,5 +23,5 @@ var geocode=(address)=>{
 };
 
 module.exports={
-	geocode
+	geocodeAddress
 };
