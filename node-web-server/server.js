@@ -15,12 +15,12 @@ app.use((req,res,next)=>{
 	next();
 });
 
-app.use((req,res,next)=>{
-	res.render('maintenance.hbs',{
-		pageTitle:"Website is down!",
-		welcomeMessage: "Sorry, but we're busy fixing something."
-	});
-});
+// app.use((req,res,next)=>{
+// 	res.render('maintenance.hbs',{
+// 		pageTitle:"Website is down!",
+// 		welcomeMessage: "Sorry, but we're busy fixing something."
+// 	});
+// });
 
 app.use(express.static(__dirname+"/public"));
 
