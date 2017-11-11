@@ -1,15 +1,31 @@
-const utils=require('./utils');
+const expect = require('expect');
+const utils = require('./utils');
 
 it('should add two numbers',()=>{
 	let result = utils.add(5,3);
-	if(result!==8){
-		throw new Error(`Expected 8 but result was ${result}.`);
-	}
+	expect(result).toBeA('number').toBe(8);
 });
 
 it('should square a number',()=>{
 	let result = utils.square(5);
-	if(result!==25){
-		throw new Error(`Expected 25 but result was ${result}.`);
-	}
+	expect(result).toBe(25).toBeA('number');
+});
+
+it('should set a user\'s name',()=>{
+	let user = {
+		age: 32,
+		firstName: "Boo"
+	};
+
+	utils.setName(user, "John Smith");
+
+	expect(user).toBeA('object').toInclude({
+		firstName:"John"
+	}).toInclude({
+		lastName:"Smith"
+	}).toInclude({
+		age:32
+	}).toExclude({
+		firstName: "Boo"
+	});
 });
